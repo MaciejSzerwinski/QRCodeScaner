@@ -1,20 +1,5 @@
 <html>
     <head>
-        <script language="javascript">
-            function js1() {
-                //document.loginform.method="post";
-                document.getElementById(Sign_in);
-                document.getElementById(Scan);
-            }
-            function loginClick(){
-                login.performClick();
-                document.getElementById("ok").value = "J'accepte";
-            }
-            function scanClick() {
-                scan.performClick();
-                document.getElementById("no").value = "Je refuse";
-            }
-        </script>  
     </head>
     <body>
         <form name="loginform">
@@ -26,8 +11,8 @@
             <input type="submit" name="QRcode" id="QR_id" onclick="scanQR.performClick();" /><b>Skanuj QR kod</b><br/>
         </form>
         <div>
-            <button type="button" id="Sign_in" onclick="loginClick();">Zaloguj</button><br/>
-            <button type="button" id="Scan" onclick="scanClick();">Skanuj QR kod</button>
+            <button type="button" id="Sign_in" onclick="login.loginClick(this.value);">Zaloguj</button><br/>
+            <button type="button" id="Scan" onclick="scan.scanClick(this.value);">Skanuj QR kod</button>
         </div>
     </body>
 </html>
