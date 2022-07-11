@@ -12,8 +12,10 @@
             <input type="text" name="username" value="" /><br/>
             <label for="psw"><b>Password</b></label>
             <input type="password" name="psw" /><br/>
+            <input type="submit" name="submit" id="submit_id" onclick="login.performClick();" /><br/><br/>
+            <input type="submit" name="QRcode" id="QR_id" onclick="scanQR.performClick();" /><b>Skanuj QR kod</b><br/>
         </form>
         <button id="Sign in" onclick="login.performClick();">Zaloguj</button><br/>
-        <button id="Scan" onclick="scanQR.performClick();">Skanuj QR kod</button>  
+        <button id="Scan" onclick="scanQR.performClick();">Skanuj QR kod</button>
     </body>
 </html>
