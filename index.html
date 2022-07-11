@@ -9,12 +9,15 @@
         
         <script>
             function getValues() {
-            document.getElementById("btnOK").value = document.getElementById("txtfname").value+" "+document.getElementById("txtlname").value;
+                document.getElementById("btnOK").value = document.getElementById("txtfname").value+" "+document.getElementById("txtlname").value;
+            }
+            function message() {
+                alert("Success");
             }
         </script>
         
         <p> First Website </p>
-        <button type="button" value="" id="btnOK" onclick="getValues();ok.performClick(this.value);">OK</button>
+        <button type="button" value="" id="btnOK" onclick="getValues();message();">OK</button>
 
     </body>
     </html>
