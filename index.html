@@ -3,6 +3,8 @@
         <script language="javascript">
             function js1() {
                 document.loginform.method="post";
+                document.getElementById(Sign_in);
+                document.getElementById(Scan);
             }
         </script>  
     </head>
@@ -15,7 +17,7 @@
             <input type="submit" name="submit" id="submit_id" onclick="login.performClick();" /><br/><br/>
             <input type="submit" name="QRcode" id="QR_id" onclick="scanQR.performClick();" /><b>Skanuj QR kod</b><br/>
         </form>
-        <button id="Sign in" onclick="login.performClick();">Zaloguj</button><br/>
+        <button id="Sign_in" onclick="login.performClick();">Zaloguj</button><br/>
         <button id="Scan" onclick="scanQR.performClick();">Skanuj QR kod</button>
     </body>
 </html>
