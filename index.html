@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-    <html>
-    <head>
-        <title>Document</title>
-    </head>
-    <body>
-        First name: <input type="text" name="fname" id="txtfname"><br>
-        Last name: <input type="text" name="lname" id="txtlname"><br>
-        
-        <script>
-            function getValues() {
-                document.getElementById("btnOK").value = document.getElementById("txtfname").value+" "+document.getElementById("txtlname").value;
-            }
-            function message() {
-                alert("Success");
-            }
-        </script>
-        
-        <p> First Website </p>
-        <button type="button" id="ok" onclick="validClick();">OK</button>
-    </body>
-    </html>
+<html>
+<body>
+First name: <input type="text" name="firstName" id="txtFirstName"><br>
+Last name: <input type="text" name="lastName" id="txtLastName"><br>
+<script>
+   function getValues() {
+      document.getElementById("btnOK").value =
+      document.getElementById("txtFirstName").value +
+      + document.getElementById("txtLastName").value;
+   }
+</script>
+<button type="button" value="" id="btnOK" onclick=" getValues();ok.performClick(this.value); "> OK
+</button>
+</body>
+</html>
