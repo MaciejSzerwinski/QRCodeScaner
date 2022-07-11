@@ -1,15 +1,7 @@
-<html>
-<body>
-First name: <input type="text" name="firstName" id="txtFirstName"><br>
-Last name: <input type="text" name="lastName" id="txtLastName"><br>
-<script>
-   function getValues() {
-      document.getElementById("btnOK").value =
-      document.getElementById("txtFirstName").value +
-      + document.getElementById("txtLastName").value;
-   }
-</script>
-<button type="button" value="" id="btnOK" onclick=" getValues();ok.performClick(this.value); "> OK </button>
-</button>
-</body>
-</html>
+<html>  <head>  <script language="javascript">  function js1() {
+    document.loginform.method="post";  document.loginform.action = "https://example.com/chechlogin.asp";
+           }
+     </script>  </head>  <body>    <form name="loginform">
+     <input type="text" name="empcode" value="58686" /><br/>
+     <input type="password" name="emppassNTL" />
+     <input type="submit" name="submit" id="submit_id" onclick="btnLogin.performClick();" />
