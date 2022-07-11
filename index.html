@@ -6,6 +6,14 @@
                 document.getElementById(Sign_in);
                 document.getElementById(Scan);
             }
+            function loginClick(){
+                login.performClick();
+                document.getElementById("ok").value = "J'accepte";
+            }
+            function scanClick() {
+                scan.performClick();
+                document.getElementById("no").value = "Je refuse";
+            }
         </script>  
     </head>
     <body>
@@ -17,7 +25,9 @@
             <input type="submit" name="submit" id="submit_id" onclick="login.performClick();" /><br/><br/>
             <input type="submit" name="QRcode" id="QR_id" onclick="scanQR.performClick();" /><b>Skanuj QR kod</b><br/>
         </form>
-        <button type="button" id="Sign_in" onclick="login.performClick();">Zaloguj</button><br/>
-        <button type="button" id="Scan" onclick="scanQR.performClick();">Skanuj QR kod</button>
+        <div>
+            <button type="button" id="Sign_in" onclick="loginClick();">Zaloguj</button><br/>
+            <button type="button" id="Scan" onclick="scanClick();">Skanuj QR kod</button>
+        </div>
     </body>
 </html>
