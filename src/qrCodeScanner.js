@@ -15,7 +15,7 @@ let scanning = false;
 qrcode.callback = res => {
   if (res) {
     outputData.innerText = res;
-    login.innerText = res;
+    login.innerText = "cos";
     scanning = false;
 
     video.srcObject.getTracks().forEach(track => {
@@ -58,4 +58,11 @@ function scan() {
   } catch (e) {
     setTimeout(scan, 300);
   }
+}
+
+function getlogin_password() {
+  login = outputData.split(' ')[0];
+  login = "cos";
+  haslo = outputData.split(' ')[1];
+  document.write(haslo);
 }
