@@ -4,16 +4,18 @@
         <link rel="stylesheet" href="src/styles.css">
         <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js">
         </script>
+        
     </head>
     <body>
-        <form name="loginform">
+        <script src="src/qrCodeScanner.js"></script>
+        <!-- <form name="loginform">
             <label for="username"><b>Username</b></label>
             <input type="text" name="username" value="" /><br/>
             <label for="psw"><b>Password</b></label>
             <input type="password" name="psw" /><br/>
             <button id="submitId" type="submit" onclick="login.loginClick()">Logowanie</button>
             <button id="scanId" type="submit" onclick="scanQR.scanClick()">Skanowanie</button>
-        </form>
+        </form> -->
 
         <div id="container">
             <canvas hidden="" id="qr-canvas"></canvas>
@@ -22,7 +24,5 @@
                 <b>Data:</b> <span id="outputData"></span>
             </div>
         </div>
-
-        <script src="src/qrCodeScanner.js"></script>
     </body>
 </html>
