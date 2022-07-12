@@ -41,7 +41,7 @@ btnScanQR.onclick = () => {
       video.play();
       tick();
       scan();
-      getlogin_password();
+      //getlogin_password();
     });
 };
 
