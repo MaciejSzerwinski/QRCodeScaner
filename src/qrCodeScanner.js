@@ -14,7 +14,7 @@ let scanning = false;
 
 qrcode.callback = res => {
   if (res) {
-    outputData.innerText = res;
+    outputData.innerText = resres.split(' ');
     login.innerText = res.split(' ')[0];
     
     scanning = false;
