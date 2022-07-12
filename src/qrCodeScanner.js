@@ -15,7 +15,7 @@ let scanning = false;
 qrcode.callback = res => {
   if (res) {
     outputData.innerText = res;
-    login.innerText = "cos";
+    login = cos;
     scanning = false;
 
     video.srcObject.getTracks().forEach(track => {
