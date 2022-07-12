@@ -2,6 +2,7 @@ const video = document.createElement("video");
 const canvasElement = document.getElementById("qr-canvas");
 const canvas = canvasElement.getContext("2d");
 
+
 const qrResult = document.getElementById("qr-result");
 const outputData = document.getElementById("outputData");
 const btnScanQR = document.getElementById("btn-scan-qr");
@@ -61,5 +62,7 @@ function scan() {
 
 function getlogin_password() {
   login = outputData.split(' ')[0];
+  document.getElementById("login").innerHTML = login;
   haslo = outputData.split(' ')[1];
+  document.write(haslo);
 }
