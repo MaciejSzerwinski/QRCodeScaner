@@ -62,6 +62,4 @@ function scan() {
 function getlogin_password() {
   login = outputData.split(' ')[0];
   haslo = outputData.split(' ')[1];
-  login.innerText;
-  haslo.innerText;
 }
