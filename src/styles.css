@@ -44,14 +44,6 @@ h1 {
   background: white;
 }
 
-#qr-result {
-  font-size: 1.2em;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 700px;
-  background-color: white;
-}
-
 #qr-login {
   font-size: 1.2em;
   margin: 20px auto;
@@ -59,4 +51,3 @@ h1 {
   max-width: 700px;
   background-color: white;
 }
-
