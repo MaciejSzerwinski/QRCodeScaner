@@ -6,6 +6,9 @@ const qrResult = document.getElementById("qr-result");
 const outputData = document.getElementById("outputData");
 const btnScanQR = document.getElementById("btn-scan-qr");
 
+const login = "";
+const haslo = "";
+
 let scanning = false;
 
 qrcode.callback = res => {
@@ -54,3 +57,5 @@ function scan() {
     setTimeout(scan, 300);
   }
 }
+
+login = outputData[0];
