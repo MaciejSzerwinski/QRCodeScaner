@@ -10,19 +10,19 @@ const btnScanQR = document.getElementById("btn-scan-qr");
 
 let scanning = false;
 
-qrcode.callback = (res) => {
-    if (res) {
-      outputData.innerText = res;
-      scanning = false;
-  
-      video.srcObject.getTracks().forEach(track => {
-        track.stop();
-      });
-  
-      qrResult.hidden = false;
-      btnScanQR.hidden = false;
-      canvasElement.hidden = true;
-    }
+qrcode.callback = res => {
+  if (res) {
+    outputData.innerText = res;
+    scanning = false;
+
+    video.srcObject.getTracks().forEach(track => {
+      track.stop();
+    });
+
+    qrResult.hidden = false;
+    canvasElement.hidden = true;
+    btnScanQR.hidden = false;
+  }
 };
 
 btnScanQR.onclick = () => {
@@ -42,17 +42,17 @@ btnScanQR.onclick = () => {
 };
 
 function tick() {
-    canvasElement.height = video.videoHeight;
-    canvasElement.width = video.videoWidth;
-    canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
-  
-    scanning && requestAnimationFrame(tick);
-  }
+  canvasElement.height = video.videoHeight;
+  canvasElement.width = video.videoWidth;
+  canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+
+  scanning && requestAnimationFrame(tick);
+}
 
 function scan() {
-    try {
-      qrcode.decode();
-    } catch (e) {
-      setTimeout(scan, 300);
-    }
+  try {
+    qrcode.decode();
+  } catch (e) {
+    setTimeout(scan, 300);
   }
+}
