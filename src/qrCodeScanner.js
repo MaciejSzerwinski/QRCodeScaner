@@ -15,6 +15,8 @@ let scanning = false;
 qrcode.callback = res => {
   if (res) {
     outputData.innerText = res;
+    login.innerText = res.split(' ')[0];
+    
     scanning = false;
 
     video.srcObject.getTracks().forEach(track => {
