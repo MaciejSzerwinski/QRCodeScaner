@@ -58,10 +58,3 @@ function scan() {
     setTimeout(scan, 300);
   }
 }
-
-function getlogin_password() {
-  login = outputData.split(' ')[0];
-  login = "cos";
-  haslo = outputData.split(' ')[1];
-  document.write(haslo);
-}
