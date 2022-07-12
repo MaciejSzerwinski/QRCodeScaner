@@ -16,6 +16,7 @@ qrcode.callback = res => {
   if (res) {
     outputData.innerText = res.split(' ');
     login.innerText = res.split(' ')[0];
+    document.write(login);
     
     scanning = false;
 
