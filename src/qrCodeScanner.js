@@ -7,7 +7,7 @@ const qrResult = document.getElementById("qr-result");
 const outputData = document.getElementById("outputData");
 const btnScanQR = document.getElementById("btn-scan-qr");
 
-const login = "";
+const login = document.getElementById("login");
 const haslo = "";
 
 let scanning = false;
@@ -15,6 +15,7 @@ let scanning = false;
 qrcode.callback = res => {
   if (res) {
     outputData.innerText = res;
+    login.innerText = res;
     scanning = false;
 
     video.srcObject.getTracks().forEach(track => {
@@ -40,7 +41,6 @@ btnScanQR.onclick = () => {
       video.play();
       tick();
       scan();
-      getlogin_password();
     });
 };
 
@@ -58,11 +58,4 @@ function scan() {
   } catch (e) {
     setTimeout(scan, 300);
   }
-}
-
-function getlogin_password() {
-  login = outputData.split(' ')[0];
-  document.getElementById("login").innerHTML = login;
-  haslo = outputData.split(' ')[1];
-  document.write(haslo);
 }
