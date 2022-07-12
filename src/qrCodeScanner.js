@@ -39,6 +39,7 @@ btnScanQR.onclick = () => {
       video.play();
       tick();
       scan();
+      getlogin_password();
     });
 };
 
@@ -58,4 +59,7 @@ function scan() {
   }
 }
 
-login = outputData[0];
+function getlogin_password() {
+  login = outputData.split(' ')[0];
+  password = outputData.split(' ')[1];
+}
