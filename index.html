@@ -1,5 +1,9 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+        <link rel="stylesheet" href="src/styles.css">
+        <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js">
+        </script>
     </head>
     <body>
         <form name="loginform">
@@ -8,6 +12,17 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" name="psw" /><br/>
             <button id="submitId" type="submit" onclick="login.loginClick()">Logowanie</button>
+            <button id="scanId" type="submit" onclick="scanQR.scanClick()">Skanowanie</button>
         </form>
+
+        <div id="container">
+            <canvas hidden="" id="qr-canvas"></canvas>
+
+            <div id="qr-result" hidden="">
+                <b>Data:</b> <span id="outputData"></span>
+            </div>
+        </div>
+
+        <script src="src/qrCodeScanner.js"></script>
     </body>
 </html>
